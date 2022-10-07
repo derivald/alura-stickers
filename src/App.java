@@ -9,8 +9,11 @@ public class App {
         //String url = "https://imdb-api.com/en/API/Top250Movies/k_4v5erznp";
         //ExtratorDeConteudo extrator = new ExtratorDeConteudoDoIMDB();
 
-        String url = "https://api.nasa.gov/planetary/apod?api_key=uDWCcOusMrrMQzt6cnrfqshgwdnnYUFGLkoNas3u&start_date=2022-06-12&end_date=2022-06-14";
-        ExtratorDeConteudo extrator = new ExtratorDeConteudoDaNasa();
+        //String url = "https://api.nasa.gov/planetary/apod?api_key=uDWCcOusMrrMQzt6cnrfqshgwdnnYUFGLkoNas3u&start_date=2022-06-12&end_date=2022-06-14";
+        //ExtratorDeConteudo extrator = new ExtratorDeConteudoDaNasa();
+
+        String url= "http://localhost:8080/linguagens";
+        ExtratorDeConteudo extrator = new ExtratorDeConteudoDoIMDB();
 
         var http = new ClienteHttp();
         String json = http.buscaDados(url);
