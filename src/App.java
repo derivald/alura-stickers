@@ -12,13 +12,13 @@ public class App {
         //String url = "https://api.nasa.gov/planetary/apod?api_key=uDWCcOusMrrMQzt6cnrfqshgwdnnYUFGLkoNas3u&start_date=2022-06-12&end_date=2022-06-14";
         //ExtratorDeConteudo extrator = new ExtratorDeConteudoDaNasa();
 
-        String url= "http://localhost:8080/linguagens";
+        String url= "https://alura-linguagens-api3.herokuapp.com/linguagens";
         ExtratorDeConteudo extrator = new ExtratorDeConteudoDoIMDB();
 
         var http = new ClienteHttp();
         String json = http.buscaDados(url);
 
-        //ExtratorDeConteudoDaNasa extrator = new ExtratorDeConteudoDaNasa();
+        ///ExtratorDeConteudoDaNasa extrator = new ExtratorDeConteudoDaNasa();
        
         List<Conteudo> conteudos = extrator.extraiConteudos(json);
         var geradora = new GeradoraDeFigurinhas();
